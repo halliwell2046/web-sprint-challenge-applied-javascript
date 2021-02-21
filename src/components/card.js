@@ -21,34 +21,34 @@ const Card = (article) => {
   // </div>
   //
 
-  const cardDiv = document.createElement('div')
-  cardDiv.classList.add('card')
-
-  const headline = document.createElement('div')
-  headline.classList.add('headline')
-  headline.textContent = `${article.headline}`
-  cardDiv.appendChild(headline)
-
-  const author = document.createElement('div')
-  author.classList.add('author')
-  author.appendChild('author')
-
-  const imgCont = document.createElement('div')
-  imgCont.classList.add('img-container')
-  imgCont.appendChild(imgCont)
-
+  const card = document.createElement('div');
+  const headline = document.createElement('div');
+  const author = document.createElement('div');
+  const imgCont = document.createElement('div');
   const img = document.createElement('img')
-  img.src = `$[article.authorPhoto]`
-  imgCont.appendChild(img)
+  const authorName = document.createElement('span')
 
-  const authorNameSpan = document.createElement('span')
-  authorNameSpan.textContent = `By: ${article.authorName}`
-  author.appendChild(authorNameSpan)
+  card.classList.add('card');
+  headline.classList.add('headline');
+  author.classList.add('author');
+  imgCont.classList.add('img-container');
+  img.src = article.authorPhoto;
 
-  cardDiv.addEventListener('click', console.log(headline))
+  headline.textContent = article.headline;
+  span.textContent = `By: ${article.authorName}`;
 
-  return cardDiv;
-};
+  card.appendChild(headline);
+  card.appendChild(author);
+  author.appendChild(imgCont);
+  imgCont.appendChild(img);
+  authorName.appendChild(span);
+
+  card.addEventListener('click', () => {
+    console.log(headline);
+  })
+
+  return card;
+}
 
 const cardAppender = (selector) => {
   // TASK 6
