@@ -11,21 +11,21 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-const header = document.createElement('div')
-header.classList.add('header')
+const header = document.createElement('div');
+header.classList.add('header');
 
-const dateSpan = document.createElement('span')
-dateSpan.classList.add('date')
-dateSpan.textContent = `${date}`
-header.appendChild(dateSpan)
+const dateSpan = document.createElement('span');
+dateSpan.classList.add('date');
+dateSpan.textContent = date;
+header.appendChild(dateSpan);
 
-const spanTitle = document.createElement('h1')
-spanTitle.textContent = `${title}`
-header.appendChild(spanTitle)
+const h1 = document.createElement('h1');
+h1.textContent = title;
+header.appendChild(h1);
 
-const tempSpan = document.createElement('span')
-tempSpan.classList.add(temp)
-tempSpan.textContent = `${temp}`
+const tempSpan = document.createElement('span');
+tempSpan.classList.add(temp);
+tempSpan.textContent = temp;
 
 return header;
 };
