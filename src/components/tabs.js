@@ -17,23 +17,21 @@ const Tabs = (topics) => {
   // </div>
   //
 
-  const div = document.createElement('div')
-  div.classList.add('topics')
-  
-  const tabOne = document.createElement('div')
-  tabOne.classList.add('tab')
-  tabOne.textContent = topics[0]
-  div.appendChild(tabOne);
+ const divOne = document.createElement('div');
+ divOne.classList.add('topics');
 
-  const tabTwo = document.createElement('div')
-  tabTwo.classList.add('tab')
-  tabTwo.textContent = topics[1]
-  div.appendChild(tabTwo);
+ const divTwo = array.map((topic) => {
+   const newTopic = document.createElement('div');
+   newTopic.classList.add('tab');
+   newTopic.textContent = topic;
+   return topicCreate;
+ })
 
-  const tabThree = document.createElement('div')
-  tabThree.classList.add('tab')
-  tabThree.textContent = topics[2]
-  div.appendChild(tabThree);
+ divOne.forEach(divTwo => {
+  divOne.appendChild(divTwo)
+ })
+
+ return divOne;
 }
 
 const tabsAppender = (selector) => {
